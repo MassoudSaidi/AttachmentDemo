@@ -39,6 +39,8 @@ The sample implements an Outlook add-in that uses Office's SSO feature to give t
     * Set **Name** to `AttachmentsDemo`.
     * Set **Supported account types** to **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**.
     * In the **Redirect URI** section, ensure that **Web** is selected in the dropdown and then set the URI to `https://localhost:44355/AzureADAuth/Authorize`.
+    This was changed in the new code. MSAL (V1.x) was used for non SSO supporting clients. The new URI is:
+`https://localhost:44355/`.
     
     **Note:** The port number used for the redirect URI (`44355`) must match the port your web server is running on. When you open the Visual Studio solution in later steps, you can find the web server's port number by selecting the **AttachmentDemoWeb** project in **Solution Explorer**, then looking at the **SSL URL** setting in the properties window.
 
